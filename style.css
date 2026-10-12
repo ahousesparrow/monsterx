@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  min-height: 100vh;
+
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}
+
+#world {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./textures/environment/Grass_03.png");
+  background-repeat: repeat;
+
+  pointer-events: auto;
+
+  .treeObject{
+    position: absolute;
+    width: calc(var(--model-size) * 1.4);
+    height: calc(var(--model-size) * 1.4);
+
+    .tree{
+      position: inherit;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: inherit;
+      height: inherit;
+
+      filter: brightness(0.75) contrast(1.1);
+    }
+
+    .treeShadow{
+      position: inherit;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: inherit;
+      height: inherit;
+    }
+
+    .collisionBox {
+      position: inherit;
+      top: 55%;
+      left: 40%;
+      width: calc(var(--model-size) / 3);
+      height: calc(var(--model-size) / 3);
+
+      background-color: rgba(225, 0, 255, 0);
+    }
+  }
+}

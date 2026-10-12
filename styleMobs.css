@@ -1,0 +1,45 @@
+:root {
+  --model-size: 50vh; /* Change this single value to resize both elements */
+}
+
+#player {
+  position: absolute; 
+  top: 0px;
+  left: 0px;
+  width: var(--model-size);
+  height: var(--model-size);
+  
+  animation: model1-idle-180 1s steps(4) infinite;
+
+  #collisionBox {
+    position: inherit;
+    top: 50%;
+    left: 33%;
+    width: calc(var(--model-size) / 3);
+    height: calc(var(--model-size) / 5);
+
+    background-color: rgba(172, 255, 47, 0);
+  }
+}
+
+.dummy {
+  position: absolute; 
+  top: 50px;
+  left: 200px;
+  z-index: 50;
+  width: var(--model-size);
+  height: var(--model-size);
+  background-size: calc(var(--model-size) * 5) calc(var(--model-size) * 4);
+  
+  animation: model2-idle-180 1s steps(5) infinite;
+
+  .collisionBox {
+    position: inherit;
+    top: 50%;
+    left: 33%;
+    width: calc(var(--model-size) / 3);
+    height: calc(var(--model-size) / 5);
+
+    background-color: rgba(255, 47, 238, 0);
+  }
+}
